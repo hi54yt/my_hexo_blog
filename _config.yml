@@ -68,4 +68,6 @@ theme: landscape
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: 
+    gitcafe: git@gitcafe.com:sniffer/sniffer.git,gitcafe-pages
