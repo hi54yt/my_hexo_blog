@@ -3,17 +3,17 @@ date: 2016-01-25 09:57:52
 tags: gis 室内地图
 ---
 将shapefile导入postgis（以公司四楼五楼路径为例）
-导入四楼路径规划图，命名为yz_network_lines_04：
+导入四楼路径规划图，命名为yz_network_lines_04，在命令行中执行：
 ```
 ogr2ogr -a_srs EPSG:3857 -lco "SCHEMA=public" -lco "COLUMN_TYPES=type=varchar,type_id=integer" -nlt MULTILINESTRING -nln yz_network_lines_04 -f PostgreSQL "PG:host=localhost port=5432 user=sniffer dbname=camus_development" yz_network_lines_04.shp
 ```
-导入五楼路径规划图，命名为yz_network_lines_05：
+导入五楼路径规划图，命名为yz_network_lines_05，在命令行中执行：
 
 ```
 ogr2ogr -a_srs EPSG:3857 -lco "SCHEMA=public" -lco "COLUMN_TYPES=type=varchar,type_id=integer" -nlt MULTILINESTRING -nln yz_network_lines_05 -f PostgreSQL "PG:host=localhost port=5432 user=sniffer dbname=camus_development" yz_network_lines_05.shp
 ```
 
-添加pgrouting所需的字段:
+添加pgrouting所需的字段，在pgAdmin或者psql中执行:
 ```
 ALTER TABLE public.yz_network_lines_04 ADD COLUMN source INTEGER;
 ALTER TABLE public.yz_network_lines_04 ADD COLUMN target INTEGER;
