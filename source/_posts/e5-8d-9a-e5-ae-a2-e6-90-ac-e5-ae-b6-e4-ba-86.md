@@ -1,7 +1,7 @@
 title: 博客搬家了
 id: 321
 categories:
-  - 未整理
+  - 昔日归档
 date: 2012-06-14 18:11:36
 tags:
 ---

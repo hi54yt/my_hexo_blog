@@ -1,7 +1,7 @@
 title: 测个试！
 id: 4
 categories:
-  - 未整理
+  - 昔日归档
 date: 2008-05-04 00:24:37
 tags:
 ---

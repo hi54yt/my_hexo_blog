@@ -1,5 +1,7 @@
 title: 纪念爷爷
 date: 2012-06-02 13:44:57
+categories:
+  - 感想
 tags:
 ---
 

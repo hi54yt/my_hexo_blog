@@ -1,7 +1,7 @@
 title: 看法
 id: 187
 categories:
-  - 未整理
+  - 昔日归档
 date: 2009-09-25 21:44:28
 tags:
 ---

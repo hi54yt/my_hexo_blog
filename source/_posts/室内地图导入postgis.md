@@ -1,5 +1,7 @@
 title: 室内地图导航路径导入
 date: 2016-01-25 09:57:52
+categories:
+  - gis
 tags: gis 室内地图
 ---
 将shapefile导入postgis（以公司四楼五楼路径为例）

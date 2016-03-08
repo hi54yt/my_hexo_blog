@@ -3,7 +3,7 @@ tags:
   - MFC
 id: 71
 categories:
-  - 收藏
+  - 昔日归档
 date: 2008-06-24 10:52:38
 ---
 
