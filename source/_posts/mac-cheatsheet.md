@@ -1,4 +1,4 @@
-title: 打造全栈工程师最顺手的开发环境
+title: 打造顺手的开发环境
 date: 2016-03-01 21:20:16
 categories:
   - Mac
@@ -17,11 +17,14 @@ tags:
 步骤：
 三种办法任意一种都能解决问题，建议使用第三种，将配置写死，下次用的时候配置还在:
 1.通过config命令
+
     npm config set registry https://registry.npm.taobao.org 
     npm info underscore （如果上面配置正确这个命令会有字符串response）
 2.命令行指定
+
     npm --registry https://registry.npm.taobao.org info underscore 
 3.编辑 ~/.npmrc 加入下面内容
+
     registry = https://registry.npm.taobao.org
 
 # Git
@@ -42,4 +45,22 @@ This will add the following to your ~/.gitconfig file:
 ```
 Now if I type git s I get the same output as git status. Of course you can always open ~/.gitconfig in a text editor and add s = status manually under the [alias] section.
 
-from:<http://oli.jp/2012/git-powerup/>
+ref:<http://oli.jp/2012/git-powerup/>
+
+# SSH
+## 第一式
+招收： 配置ssh config快速登录服务器
+步骤：
+打开~/.ssh/config，加入以下内容：
+```
+Host hubei
+    HostName 192.168.40.11
+    User hbsb
+Host yzsjzx
+    HostName 42.96.206.22
+    User wwwuser
+Host camus
+    HostName 114.215.96.33
+    User wwwuser
+```
+以后可以这样登录服务器：ssh hubei

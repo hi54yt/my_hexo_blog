@@ -47,6 +47,23 @@ psql -U username -d py_geoan_cb -a -f pgr_createTopology3d.sql
 psql -U username -d py_geoan_cb -a -f indrz_create_3d_networklines.sql
 ```
 
+常见问题：
+1. psql:indrz_create_3d_networklines.sql:81: NOTICE:  -------> public.networklines_3857 not found
+原因：用户没有权限
+解决：ALTER ROLE wwwuser SUPERUSER CREATEROLE CREATEDB REPLICATION;
+
+2. RGeo::Error::UnsupportedOperation: Proj4 is not supported because the proj4 library was not found at install time.
+原因：缺少proj本地依赖
+解决：
+查看是否支持：
+        RGeo::CoordSys::Proj4.supported?
+安装依赖：
+        sudo apt-get install binutils libproj-dev gdal-bin
+重新安装gem：
+        gem uninstall rgeo
+        gem install rgeo
+
+
 
 附件：
 pgr_pointtoid3d.sql

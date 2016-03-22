@@ -71,3 +71,5 @@ deploy:
   type: git
   repo: 
     gitcafe: git@gitcafe.com:sniffer/sniffer.git,gitcafe-pages
+    coding: git@git.coding.net:hi54yt/hi54yt.git,coding-pages
+    github: git@github.com:hi54yt/hi54yt.github.com.git,master
