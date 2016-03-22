@@ -3,7 +3,7 @@ date: 2016-03-07 16:26:36
 category: gis
 tags:
 ---
-将geoserver部署到ubuntu的时候，遇到label显示中文乱码的问题，记录下解决过程：
+将geoserver部署到ubuntu的时候，遇到label显示中文乱码的问题，一般这个问题都是因为ubuntu的jvm缺少中文字体造成的，记录下解决过程：
 
 进入j2sdk目录，比如/usr/lib/jvm/java-7-openjdk-amd64/jre/lib，创建fallback目录：
 

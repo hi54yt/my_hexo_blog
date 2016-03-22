@@ -49,7 +49,7 @@ ref:<http://oli.jp/2012/git-powerup/>
 
 # SSH
 ## 第一式
-招收： 配置ssh config快速登录服务器
+招式： 配置ssh config快速登录服务器
 步骤：
 打开~/.ssh/config，加入以下内容：
 ```
@@ -63,4 +63,20 @@ Host camus
     HostName 114.215.96.33
     User wwwuser
 ```
-以后可以这样登录服务器：ssh hubei
+以后可以这样登录服务器：`ssh hubei`
+
+# 其它
+## 第一式
+招式：禁用DS_Store 
+步骤：
+在命令行中执行：
+        
+        defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+删除系统中已经存在的DS_Store文件
+        
+        sudo find / -name ".DS_Store" -depth -exec rm {} \;
+然后记得重启finder
+        
+        killall Finder
+心得：
+.DS_Store是Mac OS保存文件夹的自定义属性的隐藏文件，如文件的图标位置或背景色，相当于Windows的desktop.ini。这个文件经常会随着git提交到项目里，十分没必要。
